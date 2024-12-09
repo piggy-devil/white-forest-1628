@@ -53,6 +53,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
   },
   trustHost: true,
+  debug: process.env.NODE_ENV === "development",
 });
 declare module "next-auth" {
   interface Session {
