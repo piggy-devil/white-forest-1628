@@ -1,5 +1,7 @@
 "use client";
 
+// export const runtime = "edge";
+
 import { SignOut } from "@/components/signout-button";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
