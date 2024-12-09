@@ -51,6 +51,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return { ...session, convexToken };
     },
   },
+  trustHost: true,
 });
 declare module "next-auth" {
   interface Session {
