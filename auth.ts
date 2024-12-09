@@ -33,6 +33,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
   adapter: ConvexAdapter,
+  secret: process.env.AUTH_SECRET,
   callbacks: {
     async session({ session }) {
       const privateKey = await importPKCS8(
